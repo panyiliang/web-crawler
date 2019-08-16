@@ -1,0 +1,11 @@
+
+
+\.vscode/
+
+nodejs/node_modules/
+
+nodejs/content/
+
+data/
+
+nodejs/mediinfo/
