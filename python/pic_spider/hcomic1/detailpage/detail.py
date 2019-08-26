@@ -101,11 +101,13 @@ def dowmloadPicture(html, pic_url, numPicture, parent_file, file, num):
         if num >= numPicture:
             return
 
-def doImage(url,parent_file):
+def doImage(url,title):
     url = url
     num_index = 0
     numPicture = 0
-    Title = getTitle(url)
+    parent_file='单页'
+    # Title = getTitle(url)
+    Title=title
     htmlparser = getHtmlParser(url)
     numPicture = getPicNum(htmlparser)
     imglist = getImgUrlList(htmlparser)  # 获取当前图片列表
@@ -133,5 +135,7 @@ def doImage(url,parent_file):
     return message
  
 if __name__ == '__main__':  # 主函数入口
-    doImage('https://hcomic1.com/cn/g2/297612/','[絶望しろむじ (しょうさん坊主)] じぇいえす学援6 ')
+    ids='297495'
+    title='[竜胆、楠木りん] 粘獄のリーゼ 淫罪の宿命'
+    doImage('https://hcomic1.com/cn/g2/'+ids+'/',title)
     print("全部任务完成")
