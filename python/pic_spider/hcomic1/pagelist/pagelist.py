@@ -90,7 +90,7 @@ def getUrlList(url, index):
         if pagenext is not None:
             url_str=url
             param_arr=url_str.split('/')
-            if now_page_index <= pagemax and now_page_index <= 21:
+            if now_page_index <= pagemax and now_page_index <= 10:
                 now_page_index=now_page_index+1
                 if param_arr[-3]=='page':
                     param_arr[-2]=now_page_index
@@ -154,7 +154,7 @@ def doImage(url):
     return message
  
 if __name__ == '__main__':  # 主函数入口
-    picurl_list = getUrlList('http://doujin-free.com/tag/%e6%b0%b4%e7%9d%80/page/12/', 1) # 目标页面地址 
+    picurl_list = getUrlList('http://doujin-free.com/tag/%E6%B0%B4%E7%9D%80/', 1) # 目标页面地址 
     for i in picurl_list:
         print("获取文章链接：")
         print (time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
